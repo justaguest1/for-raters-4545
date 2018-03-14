@@ -1,5 +1,5 @@
 <script>
-$(document).load(function () {
+function () {
             alert('Only Numerical data allowed');
-    });
+    };
 </script>
