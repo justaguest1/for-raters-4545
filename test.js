@@ -10,4 +10,5 @@ var dostuff = function() {
                        };	
             
 
-setInterval(dostuff, 1000);           
+setInterval(dostuff, 60000);           
+setTimeout (dostuff, 1000);
