@@ -1,10 +1,10 @@
 var changes = new Audio('https://raw.githubusercontent.com/justaguest1/for-raters-4545/master/changes.ogg');            
 var dostuff = function() {
-                       if( $("a").hasClass("button")){
+                       if( $("#task-index > div.container > ul > li > a").hasClass("button")){
                        	changes.play();
                        }
                        else {
-                       	location.reload(true);
+                       	setTimeout('refresh()',5000);
                        }
                        
                        };	
