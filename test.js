@@ -1,1 +1,10 @@
-timeout=prompt("Set timeout [s]"); current=location.href; if(timeout>0) setTimeout('reload()',1000*timeout); else location.replace(current); function reload(){ setTimeout('reload()',1000*timeout); fr4me='<frameset cols=\'*\'>\n<frame src=\''+current+'\'/>'; fr4me+='</frameset>'; with(document){write(fr4me);void(close())}; }
+var changes = new Audio('https://raw.githubusercontent.com/justaguest1/for-raters-4545/master/changes.ogg');            
+var dostuff = function() {
+                       if( $("a").hasClass("button")){
+
+                       	changes.play();
+                       }
+                       else {alert('Button is not present');
+                       }
+                       
+                       };	
