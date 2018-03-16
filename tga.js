@@ -10,3 +10,24 @@ function dostuff(){
                        }   
 setInterval(dostuff, 60000);
 };
+
+//To Remember The Choice of TGA
+$(function()
+{
+    $('input[type=radio]', window.parent.frames[0].document).each(function()
+    {
+        var state = JSON.parse( localStorage.getItem('radio_'  + this.id) );
+        
+        if (state) this.checked = state.checked;
+    });
+});
+
+$(window).bind('unload', function()
+{
+    $('input[type=radio]', window.parent.frames[0].document).each(function()
+    {
+        localStorage.setItem(
+            'radio_' + this.id, JSON.stringify({checked: this.checked})
+        );
+    });
+});
