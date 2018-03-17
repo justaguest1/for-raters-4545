@@ -10,7 +10,7 @@ function dostuff(){
                          alert("This page will reload");
                        }
                        }   
-setInterval(dostuff, prompt);
+setInterval(dostuff, time);
 };
 
 //To Remember The Choice of TGA
