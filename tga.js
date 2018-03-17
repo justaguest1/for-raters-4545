@@ -1,14 +1,16 @@
 if (window.location.pathname == '/evaluation/rater'){ //For TGA
+var time = prompt('Time');
 var changes = new Audio('https://raw.githubusercontent.com/justaguest1/for-raters-4545/master/changes.ogg');            
 function dostuff(){
                        if( $('#task-index > div.container > ul > li:nth-child(n) > a', window.parent.frames[0].document).hasClass("button")){
                        	changes.play();
                        }
                        else {
-                       $( '#mainf' ).attr( 'src', function ( i, val ) { return val; });
+                       //$( '#mainf' ).attr( 'src', function ( i, val ) { return val; });
+                         alert("This page will reload");
                        }
                        }   
-setInterval(dostuff, 60000);
+setInterval(dostuff, prompt);
 };
 
 //To Remember The Choice of TGA
