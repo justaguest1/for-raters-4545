@@ -25,8 +25,7 @@ function dostuff2(){
                        else {
                        $( '#mainf' ).attr( 'src', function ( i, val ) { return val; });
                        setTimeout(dostuff2, 60000);
-                       }
-                       }  
+                       } 
 };
 
 
