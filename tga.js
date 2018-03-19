@@ -2,6 +2,20 @@ if (window.location.pathname == '/evaluation/rater'){ //For TGA
 var addRadio = $('#task-index', window.parent.frames[0].document).append('<div id="popupPrompt"><input type="radio" name="refPage" id="ref" value="Yes" checked="true"/>Refresh<input type="radio" name="refPage" id="refAc" value="No"/>Refresh + Accept<br /></div>');
 var changes = new Audio('https://raw.githubusercontent.com/justaguest1/for-raters-4545/master/changes.ogg');            
 setTimeout(dostuff, 5000);
+  
+  $('input:radio[name=refPage]').change(
+    function(){
+        if ($(this).val() == 'Yes') {
+dostuff();        }
+        else {
+
+if ($(this).val() == 'No') {
+dostuff2();
+}
+        }
+    });
+
+  
 function dostuff(){
                        $('#task-index', window.parent.frames[0].document).append('<div id="popupPrompt"><input type="radio" name="refPage" id="ref" value="Yes" checked="true"/>Refresh<input type="radio" name="refPage" id="refAc" value="No"/>Refresh + Accept<br /></div>');
                        if( $('#task-index > div.container > ul > li:nth-child(n) > a', window.parent.frames[0].document).hasClass("button")){
@@ -9,6 +23,7 @@ function dostuff(){
                        }
                        else {
                        $( '#mainf' ).attr( 'src', function ( i, val ) { return val; });
+                       $('#task-index', window.parent.frames[0].document).append('<div id="popupPrompt"><input type="radio" name="refPage" id="ref" value="Yes" checked="true"/>Refresh<input type="radio" name="refPage" id="refAc" value="No"/>Refresh + Accept<br /></div>');  
                        setTimeout(dostuff, 60000);
                        }
                        }  
@@ -29,17 +44,6 @@ function dostuff2(){
 };
 
 
-$('input:radio[name=refPage]').change(
-    function(){
-        if ($(this).val() == 'Yes') {
-dostuff();        }
-        else {
-
-if ($(this).val() == 'No') {
-dostuff2();
-}
-        }
-    });
 
 
 
