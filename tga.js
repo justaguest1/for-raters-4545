@@ -1,11 +1,15 @@
+function addRadio() {
+  $('#task-index', window.parent.frames[0].document).append('<div id="popupPrompt"><input type="radio" name="refPage" id="ref" value="Yes" checked="true"/>Refresh<input type="radio" name="refPage" id="refAc" value="No"/>Refresh + Accept<br /></div>');
+};
+
 $(document).ready(function() { 
 
 
 
 if (window.location.pathname == '/evaluation/rater'){ //For TGA
-function addRadio() {$('#task-index', window.parent.frames[0].document).append('<div id="popupPrompt"><input type="radio" name="refPage" id="ref" value="Yes" checked="true"/>Refresh<input type="radio" name="refPage" id="refAc" value="No"/>Refresh + Accept<br /></div>');};
 var changes = new Audio('https://raw.githubusercontent.com/justaguest1/for-raters-4545/master/changes.ogg');            
   
+
 
 
 function dostuff(){
